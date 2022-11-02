@@ -55,7 +55,7 @@ while (<>) {
 ##################
 ## Report Output
 ##################
-print $outputcolors{Headers}, "###########\n## Fixed width output\n###########";
+print $outputcolors{Headers}, "###########\n## Fixed width output\n###########\n";
 
 print $outputcolors{Headers}, sprintf $format, "Issue","Risk","Component","Category";
 for my $i (@vulnlist) {
