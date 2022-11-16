@@ -4,7 +4,12 @@ use Net::MAC::Vendor;
 Net::MAC::Vendor::load_cache('oui.txt');
 
 # Quick and dirty for now....
-# To make this work run somehting like: ssh -i ~/.ssh/ubiquiti admin@10.0.0.2 'mca-dump' | perl ./switch-info.pl
+#
+# Before you use this, get a cached copy of the OUI lookup stuff because the Net::MAC::Vendor thing is badly behaved:
+#    curl -O 'https://standards-oui.ieee.org/oui/oui.txt'
+#
+# To make this work run somehting like:
+#    ssh -i ~/.ssh/ubiquiti admin@10.0.0.2 'mca-dump' | perl ./switch-info.pl
 
 use JSON;
 use Data::Dumper; # Including dumper so you can add things like: print Dumper($data) as debug statements to see what Perl thinks of the JSON data...
